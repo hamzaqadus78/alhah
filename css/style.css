@@ -2,6 +2,30 @@
 
 /* Change font of ALHAH INDUSTRIES in topbar */
 /* Premium Styled Logo - ALHAH INDUSTRIES */
+
+.topbar-logo {
+    font-family: 'Oswald', 'Rajdhani', sans-serif;
+    font-weight: 800;
+    letter-spacing: 1px;
+    font-size: 2.1rem;
+    line-height: 1;
+}
+/* Beautiful mobile navbar - logo and hamburger on same line */
+@media (max-width: 991.98px) {
+    .navbar-brand h1 {
+        font-size: 1.4rem !important;
+        margin: 0;
+    }
+    .navbar-toggler {
+        padding: 4px 8px !important;
+        margin-left: 10px;
+    }
+    .navbar .container {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
+
 .topbar-logo {
     font-family: 'Oswald', 'Rajdhani', sans-serif;
     font-weight: 800;
