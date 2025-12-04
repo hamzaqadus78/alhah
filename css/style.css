@@ -309,97 +309,222 @@
 }
 
 
-/*** About ***/
 .about-img {
     position: relative;
-    padding-left: 45px;
+    display: inline-block;           /* Important: wraps tightly around the image */
+    width: fit-content;
+    padding: 20px 0 0 45px;          /* Keeps your original offset look */
+    
 }
+
 .about-img::before {
     position: absolute;
     content: "";
-    width: 490px;
-    height: 270px;
     top: 0;
     left: 0;
-    border: 5px solid var(--bs-yellow);
-    animation: animateUpDown 3s ease-in-out infinite;
+    right: 35px;     /* Adjust these two values to control frame size & thickness */
+    bottom: 35px;    /* ↑ Play with 30px–50px to match your design */
+    border: 6px solid var(--bs-yellow);
+    animation: floatFrame 4s ease-in-out infinite;  /* This animates the ENTIRE frame + image */
     z-index: -1;
+    pointer-events: none;
 }
+
+/* This animates the WHOLE image + yellow frame together → exactly like your original */
+@keyframes floatFrame {
+    0%, 100% { transform: translateY(0); }
+    50%      { transform: translateY(-15px); }
+}
+
+/* Mobile adjustment */
+@media (max-width: 767px) {
+    .about-img {
+        padding: 15px 0 0 25px;
+    }
+    .about-img::before {
+        right: 20px;
+        bottom: 25px;
+        border-width: 4px;
+    }
+    @keyframes floatFrame {
+        0%, 100% { transform: translateY(0); }
+        50%      { transform: translateY(-10px); }
+    }
+}
+
 .about-img4 {
     position: relative;
-    padding-left: 45px;
+    display: inline-block;           /* Important: wraps tightly around the image */
+    width: fit-content;
+    padding: 20px 0 0 45px;          /* Keeps your original offset look */
+    
 }
+
 .about-img4::before {
     position: absolute;
     content: "";
-    width: 490px;
-    height: 420px;
     top: 0;
     left: 0;
-    border: 5px solid var(--bs-BLUE);
-    animation: animateUpDown 3s ease-in-out infinite;
+    right: 35px;     /* Adjust these two values to control frame size & thickness */
+    bottom: 35px;    /* ↑ Play with 30px–50px to match your design */
+    border: 6px solid var(--bs-BLUE);
+    animation: floatFrame 4s ease-in-out infinite;  /* This animates the ENTIRE frame + image */
     z-index: -1;
+    pointer-events: none;
 }
 
+/* This animates the WHOLE image + yellow frame together → exactly like your original */
+@keyframes floatFrame {
+    0%, 100% { transform: translateY(0); }
+    50%      { transform: translateY(-15px); }
+}
+
+/* Mobile adjustment */
+@media (max-width: 767px) {
+    .about-img4 {
+        padding: 15px 0 0 25px;
+    }
+    .about-img4::before {
+        right: 20px;
+        bottom: 25px;
+        border-width: 4px;
+    }
+    @keyframes floatFrame {
+        0%, 100% { transform: translateY(0); }
+        50%      { transform: translateY(-10px); }
+    }
+}
 
 .about-img3 {
     position: relative;
-    padding-left: 45px;
+    display: inline-block;           /* Important: wraps tightly around the image */
+    width: fit-content;
+    padding: 20px 0 0 45px;          /* Keeps your original offset look */
+    
 }
+
 .about-img3::before {
     position: absolute;
     content: "";
-    width: 490px;
-    height: 470px;
     top: 0;
     left: 0;
-    border: 5px solid var(--bs-gray);
-    animation: animateUpDown 3s ease-in-out infinite;
+    right: 35px;     /* Adjust these two values to control frame size & thickness */
+    bottom: 35px;    /* ↑ Play with 30px–50px to match your design */
+    border: 6px solid var(--bs-gray);
+    animation: floatFrame 4s ease-in-out infinite;  /* This animates the ENTIRE frame + image */
     z-index: -1;
+    pointer-events: none;
 }
+
+/* This animates the WHOLE image + yellow frame together → exactly like your original */
+@keyframes floatFrame {
+    0%, 100% { transform: translateY(0); }
+    50%      { transform: translateY(-15px); }
+}
+
+/* Mobile adjustment */
+@media (max-width: 767px) {
+    .about-img3 {
+        padding: 15px 0 0 25px;
+    }
+    .about-img3::before {
+        right: 20px;
+        bottom: 25px;
+        border-width: 4px;
+    }
+    @keyframes floatFrame {
+        0%, 100% { transform: translateY(0); }
+        50%      { transform: translateY(-10px); }
+    }
+}
+
+
 .about-img2 {
     position: relative;
-    padding-left: 45px;
+    display: inline-block;           /* Important: wraps tightly around the image */
+    width: fit-content;
+    padding: 20px 0 0 45px;          /* Keeps your original offset look */
+    
 }
+
 .about-img2::before {
     position: absolute;
     content: "";
-    width: 490px;
-    height: 320px;
     top: 0;
     left: 0;
-    border: 5px solid var(--bs-cyan);
-    animation: animateUpDown 3s ease-in-out infinite;
+    right: 35px;     /* Adjust these two values to control frame size & thickness */
+    bottom: 35px;    /* ↑ Play with 30px–50px to match your design */
+    border: 6px solid var(--bs-cyan);
+    animation: floatFrame 4s ease-in-out infinite;  /* This animates the ENTIRE frame + image */
     z-index: -1;
+    pointer-events: none;
+}
+
+/* This animates the WHOLE image + yellow frame together → exactly like your original */
+@keyframes floatFrame {
+    0%, 100% { transform: translateY(0); }
+    50%      { transform: translateY(-15px); }
+}
+
+/* Mobile adjustment */
+@media (max-width: 767px) {
+    .about-img2 {
+        padding: 15px 0 0 25px;
+    }
+    .about-img2::before {
+        right: 20px;
+        bottom: 25px;
+        border-width: 4px;
+    }
+    @keyframes floatFrame {
+        0%, 100% { transform: translateY(0); }
+        50%      { transform: translateY(-10px); }
+    }
 }
 
 .about-img1 {
     position: relative;
-    padding-left: 45px;
+    display: inline-block;           /* Important: wraps tightly around the image */
+    width: fit-content;
+    padding: 20px 0 0 45px;          /* Keeps your original offset look */
+    
 }
+
 .about-img1::before {
     position: absolute;
     content: "";
-    width: 400px;
-    height: 400px;
     top: 0;
     left: 0;
-    border: 5px solid var(--bs-yellow);
-    animation: animateUpDown 3s ease-in-out infinite;
+    right: 35px;     /* Adjust these two values to control frame size & thickness */
+    bottom: 35px;    /* ↑ Play with 30px–50px to match your design */
+    border: 6px solid var(--bs-yellow);
+    animation: floatFrame 4s ease-in-out infinite;  /* This animates the ENTIRE frame + image */
     z-index: -1;
+    pointer-events: none;
 }
 
-@keyframes animateUpDown { 
-    0% { 
-        top: -25px;
-    }
-    50% { 
-        top: -45px;
-    }
-    100% { 
-        top: -25px;
-    } 
+/* This animates the WHOLE image + yellow frame together → exactly like your original */
+@keyframes floatFrame {
+    0%, 100% { transform: translateY(0); }
+    50%      { transform: translateY(-15px); }
 }
+
+/* Mobile adjustment */
+@media (max-width: 767px) {
+    .about-img1 {
+        padding: 15px 0 0 25px;
+    }
+    .about-img1::before {
+        right: 20px;
+        bottom: 25px;
+        border-width: 4px;
+    }
+    @keyframes floatFrame {
+        0%, 100% { transform: translateY(0); }
+        50%      { transform: translateY(-10px); }
+    }
+}
+
 
 
 /*** Service ***/
