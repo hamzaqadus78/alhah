@@ -1059,7 +1059,24 @@
     transform: skewX(-5deg); /* optional: slight slant for dynamic look */
     transition: all 0.3s;
 }
+.category-header-section h3::before {
+    left: -15vw;        /* relative to viewport width */
+    right: -15vw;
+}
 
+@media (max-width: 768px) {
+    .category-header-section h3::before {
+        left: -10vw;
+        right: -10vw;
+    }
+}
+
+@media (max-width: 480px) {
+    .category-header-section h3::before {
+        left: -5vw;
+        right: -5vw;
+    }
+}
 /* If you want a more solid color, replace background with: */
 /* background: #0f6b6b20;  (20% opacity) */
 
