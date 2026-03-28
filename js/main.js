@@ -104,4 +104,41 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 });
+// Initialize WOW.js (if needed, keep as is)
+new WOW().init();
 
+// Detect if device supports hover (desktop/laptop with mouse)
+const supportsHover = window.matchMedia('(hover: hover)').matches;
+
+// Get all flip cards and the hint element (optional)
+const flipCards = document.querySelectorAll('.flip-card');
+const hintSpan = document.getElementById('interactionHint');
+
+// Update hint text based on interaction type
+// if (hintSpan) {
+//     hintSpan.innerHTML = supportsHover
+//         ? '✨ Hover over any card to flip and reveal the category details! ✨'
+//         : '👆 Tap any card to flip and see the category — then click the button! 👆';
+// }
+
+// Set up flip behavior
+if (supportsHover) {
+    // Desktop: flip on mouse enter / leave
+    flipCards.forEach(card => {
+        card.addEventListener('mouseenter', () => {
+            card.classList.add('flipped');
+        });
+        card.addEventListener('mouseleave', () => {
+            card.classList.remove('flipped');
+        });
+    });
+} else {
+    // Mobile / touch: toggle flip on click, but ignore button clicks
+    flipCards.forEach(card => {
+        card.addEventListener('click', (event) => {
+            // Do not flip if the click was on the button
+            if (event.target.closest('.btn-category')) return;
+            card.classList.toggle('flipped');
+        });
+    });
+}
