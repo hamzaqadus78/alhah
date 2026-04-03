@@ -1106,7 +1106,7 @@
 .whatsapp-popup {
     position: fixed;
      left: 30px;      /* was: right: 30px */
-    right: auto;
+    /* right: auto; */
     bottom: 100px;
     width: 320px;
     background: white;
