@@ -1328,3 +1328,9 @@
         bottom: 80px;
     }
 }
+.whatsapp-float-left {
+    touch-action: manipulation;  /* prevents zoom on double-tap */
+}
+.whatsapp-float-left img:active {
+    transform: scale(0.96);      /* visual feedback on tap */
+}

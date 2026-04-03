@@ -144,23 +144,32 @@ if (supportsHover) {
 }
 
     const floatBtnLeft = document.getElementById('whatsappFloatLeft');
-    const popupSimple = document.getElementById('whatsappSimplePopup');
-    const closeSimple = document.getElementById('closeSimplePopup');
+const popupSimple = document.getElementById('whatsappSimplePopup');
+const closeSimple = document.getElementById('closeSimplePopup');
 
-    // Toggle popup on button click
-    floatBtnLeft.addEventListener('click', (e) => {
-        e.stopPropagation();
-        popupSimple.classList.toggle('active');
-    });
+// Function to toggle popup
+function togglePopup(e) {
+    e.stopPropagation();
+    popupSimple.classList.toggle('active');
+}
 
-    // Close popup on X button
-    closeSimple.addEventListener('click', () => {
+// Function to close popup
+function closePopup(e) {
+    e.stopPropagation();
+    popupSimple.classList.remove('active');
+}
+
+// Function to close when clicking outside
+function handleOutsideClick(e) {
+    if (!floatBtnLeft.contains(e.target) && !popupSimple.contains(e.target)) {
         popupSimple.classList.remove('active');
-    });
+    }
+}
 
-    // Close popup when clicking outside
-    document.addEventListener('click', (event) => {
-        if (!floatBtnLeft.contains(event.target) && !popupSimple.contains(event.target)) {
-            popupSimple.classList.remove('active');
-        }
-    });
+// Add event listeners for both touch and mouse
+floatBtnLeft.addEventListener('click', togglePopup);
+floatBtnLeft.addEventListener('touchstart', togglePopup, { passive: false });
+closeSimple.addEventListener('click', closePopup);
+closeSimple.addEventListener('touchstart', closePopup, { passive: false });
+document.addEventListener('click', handleOutsideClick);
+document.addEventListener('touchstart', handleOutsideClick, { passive: false });
