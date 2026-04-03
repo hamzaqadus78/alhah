@@ -142,3 +142,26 @@ if (supportsHover) {
         });
     });
 }
+
+    // Floating button + popup logic
+    const floatBtn = document.getElementById('whatsappFloatBtn');
+    const popup = document.getElementById('whatsappPopup');
+    const closeBtn = document.getElementById('closePopupBtn');
+
+    // Show popup on button click
+    floatBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        popup.classList.toggle('active');
+    });
+
+    // Close popup on X button
+    closeBtn.addEventListener('click', () => {
+        popup.classList.remove('active');
+    });
+
+    // Optional: close popup when clicking outside of it (on document)
+    document.addEventListener('click', (event) => {
+        if (!floatBtn.contains(event.target) && !popup.contains(event.target)) {
+            popup.classList.remove('active');
+        }
+    });
