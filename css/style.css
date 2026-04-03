@@ -1203,9 +1203,9 @@
         height: 50px;
     }
     .whatsapp-popup {
-        width: 280px;
         left: 20px;
         right: auto;
+        width: 280px;
         bottom: 80px;
     }
 }
