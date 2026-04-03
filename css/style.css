@@ -1084,7 +1084,7 @@
 .whatsapp-float {
     position: fixed;
     bottom: 30px;
-    right: 30px;
+    right: auto;
     z-index: 1000;
     cursor: pointer;
     transition: all 0.3s ease;
