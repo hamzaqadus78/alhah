@@ -1105,19 +1105,18 @@
 /* Popup modal */
 .whatsapp-popup {
     position: fixed;
-     left: 30px;      /* was: right: 30px */
-    /* right: auto; */
     bottom: 100px;
+    left: 30px;
+    right: auto;          /* explicitly override any right value */
     width: 320px;
     background: white;
     border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(255, 220, 220, 0.2);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
     z-index: 1001;
     display: none;
     flex-direction: column;
     overflow: hidden;
     animation: fadeInUp 0.3s ease;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .whatsapp-popup.active {
