@@ -1106,8 +1106,8 @@
 .whatsapp-popup {
     position: fixed;
     bottom: 100px;
-    left: 30px;
-    right: auto;          /* explicitly override any right value */
+   left: 30px !important;
+    right: auto !important;         /* explicitly override any right value */
     width: 320px;
     background: white;
     border-radius: 20px;
