@@ -1105,12 +1105,13 @@
 /* Popup modal */
 .whatsapp-popup {
     position: fixed;
+     left: 30px;      /* was: right: 30px */
+    right: auto;
     bottom: 100px;
-    right: 30px;
     width: 320px;
     background: white;
     border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    box-shadow: 0 10px 30px rgba(255, 220, 220, 0.2);
     z-index: 1001;
     display: none;
     flex-direction: column;
@@ -1196,7 +1197,7 @@
 @media (max-width: 480px) {
     .whatsapp-float {
         bottom: 20px;
-        right: 20px;
+        left: 20px;
     }
     .whatsapp-float img {
         width: 50px;
@@ -1204,7 +1205,8 @@
     }
     .whatsapp-popup {
         width: 280px;
-        right: 20px;
+        left: 20px;
+        right: auto;
         bottom: 80px;
     }
 }
