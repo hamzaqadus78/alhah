@@ -143,25 +143,24 @@ if (supportsHover) {
     });
 }
 
-    // Floating button + popup logic
-    const floatBtn = document.getElementById('whatsappFloatBtn');
-    const popup = document.getElementById('whatsappPopup');
-    const closeBtn = document.getElementById('closePopupBtn');
+    const floatBtnLeft = document.getElementById('whatsappFloatLeft');
+    const popupSimple = document.getElementById('whatsappSimplePopup');
+    const closeSimple = document.getElementById('closeSimplePopup');
 
-    // Show popup on button click
-    floatBtn.addEventListener('click', (e) => {
+    // Toggle popup on button click
+    floatBtnLeft.addEventListener('click', (e) => {
         e.stopPropagation();
-        popup.classList.toggle('active');
+        popupSimple.classList.toggle('active');
     });
 
     // Close popup on X button
-    closeBtn.addEventListener('click', () => {
-        popup.classList.remove('active');
+    closeSimple.addEventListener('click', () => {
+        popupSimple.classList.remove('active');
     });
 
-    // Optional: close popup when clicking outside of it (on document)
+    // Close popup when clicking outside
     document.addEventListener('click', (event) => {
-        if (!floatBtn.contains(event.target) && !popup.contains(event.target)) {
-            popup.classList.remove('active');
+        if (!floatBtnLeft.contains(event.target) && !popupSimple.contains(event.target)) {
+            popupSimple.classList.remove('active');
         }
     });
