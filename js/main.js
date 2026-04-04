@@ -143,19 +143,16 @@ if (supportsHover) {
     });
 }
 
-     const floatBtn = document.getElementById('whatsappFloatLeft');
+const floatBtn = document.getElementById('whatsappFloatLeft');
 const popup = document.getElementById('whatsappSimplePopup');
 const closeBtn = document.getElementById('closeSimplePopup');
 
-// Open popup on button tap/click
+// Open popup on button tap/click (only one event to avoid double toggle)
 floatBtn.addEventListener('click', (e) => {
     e.stopPropagation();
     popup.classList.toggle('active');
 });
-floatBtn.addEventListener('touchstart', (e) => {
-    e.stopPropagation();
-    popup.classList.toggle('active');
-});
+// No separate touchstart – click handles both desktop and mobile
 
 // Close popup when cross button is clicked or touched
 closeBtn.addEventListener('click', (e) => {
