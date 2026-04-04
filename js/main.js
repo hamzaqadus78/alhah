@@ -143,25 +143,42 @@ if (supportsHover) {
     });
 }
 
-    const floatBtnLeft = document.getElementById('whatsappFloatLeft');
+     const floatBtnLeft = document.getElementById('whatsappFloatLeft');
     const popupSimple = document.getElementById('whatsappSimplePopup');
     const closeSimple = document.getElementById('closeSimplePopup');
 
-    // Toggle popup on button click
-    floatBtnLeft.addEventListener('click', (e) => {
+    // Toggle popup on button click/tap
+    floatBtnLeft.addEventListener('click', function(e) {
+        e.stopPropagation();
+        popupSimple.classList.toggle('active');
+    });
+
+    // Also support touchstart for instant response on mobile
+    floatBtnLeft.addEventListener('touchstart', function(e) {
         e.stopPropagation();
         popupSimple.classList.toggle('active');
     });
 
     // Close popup on X button
-    closeSimple.addEventListener('click', () => {
+    closeSimple.addEventListener('click', function(e) {
+        e.stopPropagation();
         popupSimple.classList.remove('active');
     });
 
-    // Close popup when clicking outside
-    document.addEventListener('click', (event) => {
+    closeSimple.addEventListener('touchstart', function(e) {
+        e.stopPropagation();
+        popupSimple.classList.remove('active');
+    });
+
+    // Close popup when clicking/tapping outside
+    document.addEventListener('click', function(event) {
         if (!floatBtnLeft.contains(event.target) && !popupSimple.contains(event.target)) {
             popupSimple.classList.remove('active');
         }
     });
-    
+
+    document.addEventListener('touchstart', function(event) {
+        if (!floatBtnLeft.contains(event.target) && !popupSimple.contains(event.target)) {
+            popupSimple.classList.remove('active');
+        }
+    });
