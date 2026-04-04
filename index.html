@@ -234,6 +234,139 @@
     </div>
 </div>
 
+
+
+<!-- Heritage & Vision - Hover Enlarge Card with Golden Glow -->
+<div class="heritage-card-container wow fadeInUp" data-wow-delay="0.2s">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-10 col-xl-9">
+                <div class="heritage-hover-card">
+                    <div class="heritage-card-inner">
+                        <div class="heritage-icon mb-4">
+                            <i class="fas fa-microscope fa-3x" style="color: #CE9233;"></i>
+                        </div>
+                        <h2 class="heritage-title text-uppercase fw-bold mb-4">Our Heritage & Vision</h2>
+                        <div class="heritage-text">
+                            <p>Our story begins long before the establishment of our company. For generations, our family has been connected to the craft of metalwork. Our ancestors were skilled blacksmiths who mastered the art of shaping metal with precision, patience, and dedication. This tradition of craftsmanship and attention to detail became the foundation of the values we carry today.</p>
+                            <p>In 1977, my father transformed this heritage into a professional surgical instruments business. Starting from the local market, he built the company on the principles of quality, trust, and reliability. Through consistent hard work and commitment to excellence, the business gradually earned the confidence of medical professionals and distributors who relied on the instruments we produced.</p>
+                            <p>Today, we proudly continue his legacy. By combining traditional craftsmanship with modern manufacturing techniques and global standards, we aim to deliver surgical instruments that meet the evolving needs of healthcare professionals. Our vision is to expand our presence internationally while preserving the values of precision, integrity, and dedication that have guided our journey for generations.</p>
+                        </div>
+                        <div class="heritage-decoration mt-4">
+                            <span class="deco-line"></span>
+                            <i class="fas fa-star-of-life mx-2" style="color: #CE9233;"></i>
+                            <span class="deco-line"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+/* Heritage Card with Side Glow - Using #CE9233 */
+.heritage-card-container {
+    margin: 4rem 0;
+}
+
+.heritage-hover-card {
+    background: #ffffff;
+    border-radius: 28px;
+    /* Side glow effect using golden color */
+    box-shadow: 
+        0 20px 35px -10px rgba(0, 0, 0, 0.1),
+        0 0 20px rgba(206, 146, 51, 0.3),
+        0 0 30px rgba(206, 146, 51, 0.2);
+    transition: all 0.4s cubic-bezier(0.2, 0.9, 0.4, 1.1);
+    overflow: hidden;
+    border: 1px solid rgba(206, 146, 51, 0.1);
+}
+
+.heritage-hover-card:hover {
+    transform: scale(1.02);
+    box-shadow: 
+        0 30px 45px -12px rgba(0, 0, 0, 0.2),
+        0 0 30px rgba(206, 146, 51, 0.5),
+        0 0 45px rgba(206, 146, 51, 0.3);
+    border-color: rgba(206, 146, 51, 0.3);
+}
+
+.heritage-card-inner {
+    padding: 2.5rem;
+    position: relative;
+    background: linear-gradient(145deg, #ffffff 0%, #fefefe 100%);
+}
+
+.heritage-icon {
+    text-align: center;
+}
+
+.heritage-title {
+    text-align: center;
+    background: linear-gradient(135deg, #CE9233, #b87a2a);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    letter-spacing: 1px;
+}
+
+.heritage-text p {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #2c3e50;
+    margin-bottom: 1.2rem;
+}
+
+.heritage-text p:last-child {
+    margin-bottom: 0;
+}
+
+.heritage-decoration {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.6;
+}
+
+.deco-line {
+    width: 60px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #CE9233, transparent);
+    display: inline-block;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .heritage-card-container .col-lg-10 {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .heritage-card-container {
+        margin: 2rem 0;
+    }
+    .heritage-card-inner {
+        padding: 1.5rem;
+    }
+    .heritage-text p {
+        font-size: 0.95rem;
+    }
+    .heritage-hover-card:hover {
+        transform: scale(1.01);
+    }
+    /* Reduce glow on mobile for performance */
+    .heritage-hover-card {
+        box-shadow: 0 20px 35px -10px rgba(0, 0, 0, 0.1);
+    }
+}
+</style>
+
+
+
+
 <!-- FLOATING WHATSAPP BUTTON (left side) -->
 <div class="whatsapp-float-left" id="whatsappFloatLeft">
     <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Chat">
@@ -317,6 +450,11 @@
     </div>
     <!-- Footer End -->
 
+
+
+
+
+    
 
     <!-- Copyright Start -->
     <div class="container-fluid text-body copyright py-4">
