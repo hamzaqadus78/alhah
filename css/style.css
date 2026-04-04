@@ -176,6 +176,7 @@
     align-items: center;
     justify-content: center;
     font-weight: normal;
+    border-radius: 40%;
 }
 
 /*** Navbar ***/
