@@ -143,42 +143,38 @@ if (supportsHover) {
     });
 }
 
-     const floatBtnLeft = document.getElementById('whatsappFloatLeft');
-    const popupSimple = document.getElementById('whatsappSimplePopup');
-    const closeSimple = document.getElementById('closeSimplePopup');
+     const floatBtn = document.getElementById('whatsappFloatLeft');
+const popup = document.getElementById('whatsappSimplePopup');
+const closeBtn = document.getElementById('closeSimplePopup');
 
-    // Toggle popup on button click/tap
-    floatBtnLeft.addEventListener('click', function(e) {
-        e.stopPropagation();
-        popupSimple.classList.toggle('active');
-    });
+// Open popup on button tap/click
+floatBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    popup.classList.toggle('active');
+});
+floatBtn.addEventListener('touchstart', (e) => {
+    e.stopPropagation();
+    popup.classList.toggle('active');
+});
 
-    // Also support touchstart for instant response on mobile
-    floatBtnLeft.addEventListener('touchstart', function(e) {
-        e.stopPropagation();
-        popupSimple.classList.toggle('active');
-    });
+// Close popup when cross button is clicked or touched
+closeBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    popup.classList.remove('active');
+});
+closeBtn.addEventListener('touchstart', (e) => {
+    e.stopPropagation();
+    popup.classList.remove('active');
+});
 
-    // Close popup on X button
-    closeSimple.addEventListener('click', function(e) {
-        e.stopPropagation();
-        popupSimple.classList.remove('active');
-    });
-
-    closeSimple.addEventListener('touchstart', function(e) {
-        e.stopPropagation();
-        popupSimple.classList.remove('active');
-    });
-
-    // Close popup when clicking/tapping outside
-    document.addEventListener('click', function(event) {
-        if (!floatBtnLeft.contains(event.target) && !popupSimple.contains(event.target)) {
-            popupSimple.classList.remove('active');
-        }
-    });
-
-    document.addEventListener('touchstart', function(event) {
-        if (!floatBtnLeft.contains(event.target) && !popupSimple.contains(event.target)) {
-            popupSimple.classList.remove('active');
-        }
-    });
+// Close popup when tapping/clicking outside
+document.addEventListener('click', (e) => {
+    if (!floatBtn.contains(e.target) && !popup.contains(e.target)) {
+        popup.classList.remove('active');
+    }
+});
+document.addEventListener('touchstart', (e) => {
+    if (!floatBtn.contains(e.target) && !popup.contains(e.target)) {
+        popup.classList.remove('active');
+    }
+});
