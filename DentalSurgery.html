@@ -1,114 +1,176 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="utf-8">
-    <title>Dental Surgery</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="" name="keywords">
-    <meta content="" name="description">
-<link rel="icon" href="img/logo1.png" type="image/x-icon">
-    <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
-
-    <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@700;800&display=swap"
-        rel="stylesheet">
-
-    <!-- Icon Font Stylesheet -->
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;1,9..40,400&display=swap" rel="stylesheet">
+    <meta charset="utf-8">
+    <title>Dental Surgery Instruments – ALHAH INDUSTRIES</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <link rel="icon" href="img/logo1.png" type="image/x-icon">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
-
-    <!-- Libraries Stylesheet -->
     <link href="lib/animate/animate.min.css" rel="stylesheet">
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-
-    <!-- Customized Bootstrap Stylesheet -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+    <link href="css/cart.css" rel="stylesheet">
+    <link href="css/colors.css" rel="stylesheet">
+    <style>
+        /* ── PDF Download Bar — teal palette to match site ── */
+        .pdf-download-bar {
+            background: linear-gradient(135deg, var(--pale, #E8F5F6) 0%, #d4eef0 100%);
+            border-top: 3px solid var(--teal, #006D77);
+            border-bottom: 1px solid #b8d9dc;
+            padding: 28px 0;
+        }
+        .pdf-download-bar .pdf-label {
+            font-size: 0.78rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--teal, #006D77);
+            margin-bottom: 6px;
+        }
+        .pdf-download-bar h5 {
+            font-weight: 700;
+            font-size: 1.15rem;
+            margin-bottom: 4px;
+            color: #1a1a2e;
+        }
+        .pdf-download-bar p {
+            font-size: 0.88rem;
+            color: #4a6b6e;
+            margin-bottom: 0;
+        }
+        .btn-pdf-dl {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 22px;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.25s;
+            white-space: nowrap;
+            text-decoration: none;
+        }
+        .btn-pdf-primary {
+            background: var(--teal, #006D77);
+            color: #fff;
+            border: 2px solid var(--teal, #006D77);
+        }
+        .btn-pdf-primary:hover {
+            background: var(--emerald, #00C49A);
+            border-color: var(--emerald, #00C49A);
+            color: #fff;
+            box-shadow: 0 4px 14px rgba(0,196,154,.3);
+        }
+        .btn-pdf-outline {
+            background: transparent;
+            color: var(--teal, #006D77);
+            border: 2px solid var(--teal, #006D77);
+        }
+        .btn-pdf-outline:hover {
+            background: var(--teal, #006D77);
+            color: #fff;
+            box-shadow: 0 4px 14px rgba(0,109,119,.25);
+        }
+        .pdf-card {
+            background: #fff;
+            border: 1px solid #c2dde0;
+            border-radius: 10px;
+            padding: 20px 24px;
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            box-shadow: 0 2px 10px rgba(0,109,119,.08);
+        }
+        .pdf-card-icon {
+            width: 50px;
+            height: 50px;
+            background: rgba(0,109,119,.1);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            font-size: 1.5rem;
+            color: var(--teal, #006D77);
+        }
+        .pdf-card-info { flex: 1; min-width: 0; }
+        @media (max-width: 576px) {
+            .pdf-card { flex-direction: column; text-align: center; }
+        }
+    </style>
 </head>
-
 <body>
-    <!-- Spinner Start -->
-    <div id="spinner"
-        class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
         <div class="spinner-border text-primary" role="status" style="width: 3rem; height: 3rem;"></div>
     </div>
-    <!-- Spinner End -->
 
-
-    <!-- Topbar Start -->
+    <!-- Topbar -->
     <div class="container-fluid bg-primary text-white d-none d-lg-flex wow fadeIn" data-wow-delay="0.1s">
-        <div class="container py-3">
+        <div class="container py-2">
             <div class="d-flex align-items-center">
-                <a href="index.html">
-                    <h2 class="text-white fw-bold m-0">ALHAH INDISTRIES</h2>
-                </a>
+                <a href="index.html"><h2 class="text-white fw-bold m-0" style="font-size:1.4rem;letter-spacing:1px;">ALHAH INDUSTRIES</h2></a>
                 <div class="ms-auto d-flex align-items-center">
-                    <small class="ms-4"><i class="fa fa-map-marker-alt me-3"></i>Kotli Loharan Main Chowk Marala Road, Sialkot</small>
-                    <small class="ms-4"><i class="fa fa-envelope me-3"></i>alhahindustries@gmail.com</small>
-                    <small class="ms-4"><i class="fa fa-phone-alt me-3"></i>+92 342 60 4911</small>
-                    <div class="ms-3 d-flex">
-                                                <a class="btn btn-sm-square btn-light text-primary ms-2" href="https://www.facebook.com/share/1DZgaXQ6Km/" target="_blank"><i
-                                class="fab fa-facebook-f"></i></a>
-                        <!-- <a class="btn btn-sm-square btn-light text-primary ms-2" href=""><i
-                                class="fab fa-twitter"></i></a> -->
-                        <a class="btn btn-sm-square btn-light text-primary ms-2" href="https://www.instagram.com/alhah_tower?igsh=MTJmdG5tcnBnZzl0Zw=="><i class="fab fa-instagram"></i></a>
-
+                    <small class="ms-4"><i class="fa fa-map-marker-alt me-2"></i>Kotli Loharan, Sialkot</small>
+                    <small class="ms-4"><i class="fa fa-envelope me-2"></i>alhahindustries@gmail.com</small>
+                    <small class="ms-4"><i class="fa fa-phone-alt me-2"></i>+92 342 600 4911</small>
+                    <div class="ms-3 d-flex gap-1">
+                        <a class="btn btn-sm-square btn-light text-primary" href="https://www.facebook.com/share/1DZgaXQ6Km/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-sm-square btn-light text-primary" href="https://www.instagram.com/alhah_industries?igsh=MTJmdG5tcnBnZzl0Zw==" target="_blank"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Topbar End -->
 
-
-    <!-- Navbar Start -->
-    <div class="container-fluid bg-white sticky-top wow fadeIn" data-wow-delay="0.1s">
+    <!-- Navbar -->
+    <div class="container-fluid bg-white sticky-top wow fadeIn shadow-sm" data-wow-delay="0.1s">
         <div class="container">
             <nav class="navbar navbar-expand-lg bg-white navbar-light p-lg-0">
-                <a href="index.html" class="navbar-brand d-lg-none">
-                    <h1 class="fw-bold m-0">ALHAH INDUSTRIESS</h1>
-                </a>
-                <button type="button" class="navbar-toggler me-0" data-bs-toggle="collapse"
-                    data-bs-target="#navbarCollapse">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+                <a href="index.html" class="navbar-brand d-lg-none"><h1 class="fw-bold m-0" style="font-size:1.3rem;">ALHAH INDUSTRIES</h1></a>
+                <button type="button" class="navbar-toggler me-0" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav">
                         <a href="index.html" class="nav-item nav-link">Home</a>
                         <a href="about.html" class="nav-item nav-link">About</a>
-                        <!-- <a href="service.html" class="nav-item nav-link">Services</a> -->
-                <div class="nav-item dropdown">
-    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Categories</a>
-    <div class="dropdown-menu bg-light rounded-0 rounded-bottom m-0">
-
-        <a href="GeneralSurgery.html"    class="dropdown-item" data-pdf="pdf/Catalogue.pdf">General Surgery</a>
-        <a href="DentalSurgery.html"     class="dropdown-item" data-pdf="pdf/Catalogue.pdf">Dental Surgery</a>
-        <a href="Orthipaedic.html"      class="dropdown-item" data-pdf="pdf/Catalogue.pdf">Orthopedic Surgery</a>
-        <a href="Spinal.html"           class="dropdown-item" data-pdf="pdf/Catalogue.pdf">Spinal Surgery</a>
-        <a href="Neuro.html"            class="dropdown-item" data-pdf="pdf/Catalogue.pdf">Neuro Surgery</a>
-
-    </div>
-</div>
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Categories</a>
+                            <div class="dropdown-menu bg-light rounded-0 rounded-bottom m-0">
+                                <a href="DentalSurgery.html" class="dropdown-item active">Dental Surgery</a>
+                                <a href="Spinal.html" class="dropdown-item">Plastic Surgery</a>
+                                <a href="Neuro.html" class="dropdown-item">Ophthalmic Surgery</a>
+                            </div>
+                        </div>
                         <a href="contact.html" class="nav-item nav-link">Contact</a>
                     </div>
-                    <!-- <div class="ms-auto d-none d-lg-block">
-                        <a href="https://htmlcodex.com/downloading/?item=3556" class="btn btn-primary py-2 px-3">Buy Pro Version</a>
-                    </div> -->
+                    <div class="ms-auto d-flex align-items-center py-2" style="overflow:visible">
+                        <button class="cart-nav-btn" onclick="AlhahCart.open()" style="position:relative;overflow:visible">
+                            <i class="fas fa-shopping-bag"></i><span>Enquiry Cart</span>
+                            <span class="cart-badge" style="display:none">0</span>
+                        </button>
+                    </div>
                 </div>
             </nav>
         </div>
     </div>
-    <!-- Navbar End -->
 
+    <!-- WhatsApp -->
+    <div class="whatsapp-float-left" id="whatsappFloatLeft"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp"></div>
+    <div class="whatsapp-simple-popup" id="whatsappSimplePopup">
+        <button class="close-simple-popup" id="closeSimplePopup">&times;</button>
+        <div class="popup-simple-body">
+            <p>Hi there! 👋<br>Click below to WhatsApp us.</p>
+            <a href="https://wa.me/923426004911?text=Hello%21%20I%20need%20more%20information%20about%20your%20surgical%20instruments." target="_blank" class="whatsapp-number-simple">+92 342 600 4911</a>
+            <div class="reply-note">We reply within 24 hours.</div>
+        </div>
+    </div>
 
-    <!-- Page Header Start -->
-    <div class="container-fluid page-header pt-5 mb-6 wow fadeIn" data-wow-delay="0.1s">
+    <!-- Page Header -->
+    <div class="container-fluid page-header pt-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="container text-center pt-5">
             <div class="row justify-content-center">
                 <div class="col-lg-7">
@@ -116,9 +178,8 @@
                         <h1 class="display-6 text-uppercase mb-3 animated slideInDown">DENTAL SURGERY</h1>
                         <nav aria-label="breadcrumb animated slideInDown">
                             <ol class="breadcrumb justify-content-center mb-0">
-                                <li class="breadcrumb-item"><a href="#">Home</a></li>
-                                <li class="breadcrumb-item"><a href="#">Pages</a></li>
-                                <li class="breadcrumb-item" aria-current="page">About</li>
+                                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                                <li class="breadcrumb-item" aria-current="page">Dental Surgery</li>
                             </ol>
                         </nav>
                     </div>
@@ -126,156 +187,275 @@
             </div>
         </div>
     </div>
-    <!-- Page Header End -->
 
-
-    <!-- About Start -->
-    <div class="container-fluid pt-6 pb-6">
+    <!-- About Section -->
+    <div class="container-fluid pt-5 pb-3">
         <div class="container">
-            <div class="row g-5">
+            <div class="row g-5 align-items-center">
                 <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
                     <div class="about-img1">
-                        <img class="img-fluid w-100" src="img/Dental2.webp">
+                        <img class="img-fluid w-100" src="img/Dental3.jpg" alt="Dental Surgery Instruments" style="min-height:300px;object-fit:cover;">
                     </div>
                 </div>
                 <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
-                    <h1 class="display-6 text-uppercase mb-4">Ultimate Welding and Quality Metal Solutions</h1>
-                    <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tellus augue,
-                        iaculis id elit eget, ultrices pulvinar tortor. Quisque vel lorem porttitor, malesuada arcu
-                        quis, fringilla risus. Pellentesque eu consequat augue.</p>
-                    <div class="row g-5 mb-4">
-                        <div class="col-sm-6">
-                            <div class="d-flex align-items-center">
-                                <div class="flex-shrink-0 btn-xl-square bg-light me-3">
-                                    <i class="fa fa-users-cog fa-2x text-primary"></i>
-                                </div>
-                                <h5 class="lh-base text-uppercase mb-0">Certified Expert & Team</h5>
-                            </div>
-                        </div>
-                        <div class="col-sm-6">
-                            <div class="d-flex align-items-center">
-                                <div class="flex-shrink-0 btn-xl-square bg-light me-3">
-                                    <i class="fa fa-tachometer-alt fa-2x text-primary"></i>
-                                </div>
-                                <h5 class="lh-base text-uppercase mb-0">Fast & Reliable Services</h5>
-                            </div>
+                    <div class="section-title-badge mb-3"><i class="fas fa-tooth me-1"></i> Dental Instruments</div>
+                    <h1 class="display-6 text-uppercase mb-4">Dental Surgery Instruments</h1>
+                    <p class="mb-4">We manufacture specialized dental instruments designed to assist dentists and oral surgeons in performing precise procedures. Our dental product range includes instruments for tooth extraction, oral tissue management, dental examinations, and surgical procedures. Each tool is designed with ergonomic handling and high durability. Add any instrument below to your <strong>Enquiry Cart</strong> and send us one bulk request.</p>
+                    <button onclick="AlhahCart.open()" class="btn btn-primary py-3 px-4 me-3">
+                        <i class="fas fa-shopping-bag me-2"></i>View Enquiry Cart
+                    </button>
+                    <a href="contact.html" class="btn btn-outline-primary py-3 px-4">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ── PDF Downloads Bar ── -->
+    <!-- Placed here so visitors see the downloads right after the intro, before scrolling into products -->
+    <div class="container-fluid pdf-download-bar wow fadeIn" data-wow-delay="0.2s">
+        <div class="container">
+            <div class="row g-3 align-items-center">
+                <div class="col-12 mb-2">
+                    <div class="pdf-label"><i class="fas fa-file-pdf me-1"></i> Downloads</div>
+                    <h5 class="mb-0">Product Documents</h5>
+                    <p>Download our full catalogue and price list for offline reference or sharing with your team.</p>
+                </div>
+                <!-- Dental Surgery Catalogue -->
+                <div class="col-sm-6 col-lg-5">
+                    <div class="pdf-card">
+                        <div class="pdf-card-icon"><i class="fas fa-book-medical"></i></div>
+                        <div class="pdf-card-info">
+                            <div style="font-weight:700;font-size:.95rem;margin-bottom:3px;">Dental Surgery Catalogue</div>
+                            <div style="font-size:.82rem;color:#4a6b6e;margin-bottom:10px;">Full illustrated instrument catalogue</div>
+                            <a href="pdf/Dental_Surgery__Alhah_Industries_001.pdf" download="Alhah_Dental_Surgery_Catalogue.pdf" class="btn-pdf-dl btn-pdf-primary">
+                                <i class="fas fa-download"></i> Download Catalogue
+                            </a>
                         </div>
                     </div>
-                    <p><i class="fa fa-check-square text-primary me-3"></i>Many variations of passages of lorem ipsum
-                    </p>
-                    <p><i class="fa fa-check-square text-primary me-3"></i>Many variations of passages of lorem ipsum
-                    </p>
-                    <p><i class="fa fa-check-square text-primary me-3"></i>Many variations of passages of lorem ipsum
-                    </p>
-                    <div class="border border-5 border-primary p-4 text-center mt-4">
-                        <h4 class="lh-base text-uppercase mb-0">We’re Good in All Metal Works Using Quality Welding Tools</h4>
+                </div>
+                <!-- Price List -->
+                <div class="col-sm-6 col-lg-5">
+                    <div class="pdf-card">
+                        <div class="pdf-card-icon"><i class="fas fa-file-invoice"></i></div>
+                        <div class="pdf-card-info">
+                            <div style="font-weight:700;font-size:.95rem;margin-bottom:3px;">Price List 2025</div>
+                            <div style="font-size:.82rem;color:#4a6b6e;margin-bottom:10px;">USD pricing for all dental instruments</div>
+                            <a href="pdf/Alhah_Industries_Price_List_2025.pdf" download="Alhah_Industries_Price_List_2025.pdf" class="btn-pdf-dl btn-pdf-outline">
+                                <i class="fas fa-download"></i> Download Price List
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- About End -->
 
+    <!-- Dental Products Section -->
+    <div class="products-section wow fadeIn" data-wow-delay="0.1s">
+        <div class="container">
+            <div class="text-center mb-5">
+                <div class="section-title-badge"><i class="fas fa-tools me-1"></i> Product Range</div>
+                <h2 class="section-heading">Dental Instruments Catalogue</h2>
+                <p class="section-subheading">Click "Add to Enquiry" to build your order list</p>
+            </div>
+            <div class="row g-4">
 
-    <!-- Footer Start -->
+                <!-- ── ACTIVE PRODUCT: Dental Extraction Forceps Set ── -->
+                <div class="col-sm-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="product-card">
+                        <div class="product-img-wrap">
+                            <img src="img/Dental3.jpg" alt="Extraction Forceps">
+                            <span class="product-badge bestseller">Bestseller</span>
+                            <button class="product-wishlist" onclick="this.classList.toggle('active');this.innerHTML=this.classList.contains('active')?'<i class=\'fas fa-heart\'></i>':'<i class=\'far fa-heart\'></i>'"><i class="far fa-heart"></i></button>
+                        </div>
+                        <div class="product-card-body">
+                            <div class="product-category-tag">Dental Surgery</div>
+                            <div class="product-name">Dental Extraction Forceps Set</div>
+                            <div class="product-desc">Premium stainless steel forceps for upper/lower tooth extraction. Ergonomic grip, serrated beaks.</div>
+                            <div class="product-meta"><span class="product-material"><i class="fas fa-circle me-1" style="color:#aaa;font-size:.6rem"></i> Surgical SS</span><span class="product-moq">MOQ: 10 pcs</span></div>
+                        </div>
+                        <div class="product-card-footer">
+                            <button class="btn-add-cart" onclick="addProduct(this,{id:'dental-001',name:'Dental Extraction Forceps Set',category:'Dental Surgery',img:'img/Dental3.jpg'})"><i class="fas fa-plus"></i> Add to Enquiry</button>
+                            <a href="https://wa.me/923426004911?text=Hi%2C%20interested%20in%20Dental%20Extraction%20Forceps" target="_blank" class="btn-inquire"><i class="fab fa-whatsapp"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!--
+                ══════════════════════════════════════════════════
+                  COMMENTED-OUT PRODUCTS — uncomment to re-enable
+                ══════════════════════════════════════════════════
+
+                <div class="col-sm-6 col-lg-4 wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="product-card">
+                        <div class="product-img-wrap">
+                            <img src="img/DENTAL1.jpg" alt="Periodontal Probe">
+                            <span class="product-badge new">New</span>
+                            <button class="product-wishlist" onclick="this.classList.toggle('active');this.innerHTML=this.classList.contains('active')?'<i class=\'fas fa-heart\'></i>':'<i class=\'far fa-heart\'></i>'"><i class="far fa-heart"></i></button>
+                        </div>
+                        <div class="product-card-body">
+                            <div class="product-category-tag">Dental Surgery</div>
+                            <div class="product-name">Periodontal Probe &amp; Explorer</div>
+                            <div class="product-desc">Double-ended probe with calibrated markings for pocket depth measurement. German SS construction.</div>
+                            <div class="product-meta"><span class="product-material"><i class="fas fa-circle me-1" style="color:#aaa;font-size:.6rem"></i> German SS</span><span class="product-moq">MOQ: 25 pcs</span></div>
+                        </div>
+                        <div class="product-card-footer">
+                            <button class="btn-add-cart" onclick="addProduct(this,{id:'dental-002',name:'Periodontal Probe & Explorer',category:'Dental Surgery',img:'img/DENTAL1.jpg'})"><i class="fas fa-plus"></i> Add to Enquiry</button>
+                            <a href="https://wa.me/923426004911?text=Hi%2C%20interested%20in%20Periodontal%20Probe" target="_blank" class="btn-inquire"><i class="fab fa-whatsapp"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="product-card">
+                        <div class="product-img-wrap">
+                            <img src="img/Dental2.webp" alt="Elevators">
+                            <button class="product-wishlist" onclick="this.classList.toggle('active');this.innerHTML=this.classList.contains('active')?'<i class=\'fas fa-heart\'></i>':'<i class=\'far fa-heart\'></i>'"><i class="far fa-heart"></i></button>
+                        </div>
+                        <div class="product-card-body">
+                            <div class="product-category-tag">Dental Surgery</div>
+                            <div class="product-name">Luxating Elevator Set (5-piece)</div>
+                            <div class="product-desc">Precision-forged luxating elevators for minimal invasive extraction. Multiple tip widths available.</div>
+                            <div class="product-meta"><span class="product-material"><i class="fas fa-circle me-1" style="color:#aaa;font-size:.6rem"></i> Surgical SS</span><span class="product-moq">MOQ: 5 sets</span></div>
+                        </div>
+                        <div class="product-card-footer">
+                            <button class="btn-add-cart" onclick="addProduct(this,{id:'dental-003',name:'Luxating Elevator Set (5-piece)',category:'Dental Surgery',img:'img/Dental2.webp'})"><i class="fas fa-plus"></i> Add to Enquiry</button>
+                            <a href="https://wa.me/923426004911?text=Hi%2C%20interested%20in%20Luxating%20Elevator%20Set" target="_blank" class="btn-inquire"><i class="fab fa-whatsapp"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="product-card">
+                        <div class="product-img-wrap">
+                            <img src="img/img1.jpg" alt="Scaler">
+                            <button class="product-wishlist" onclick="this.classList.toggle('active');this.innerHTML=this.classList.contains('active')?'<i class=\'fas fa-heart\'></i>':'<i class=\'far fa-heart\'></i>'"><i class="far fa-heart"></i></button>
+                        </div>
+                        <div class="product-card-body">
+                            <div class="product-category-tag">Dental Surgery</div>
+                            <div class="product-name">Sickle Scaler &amp; Curette Set</div>
+                            <div class="product-desc">Professional dental scaling instruments for supragingival and subgingival calculus removal.</div>
+                            <div class="product-meta"><span class="product-material"><i class="fas fa-circle me-1" style="color:#aaa;font-size:.6rem"></i> Surgical SS</span><span class="product-moq">MOQ: 20 pcs</span></div>
+                        </div>
+                        <div class="product-card-footer">
+                            <button class="btn-add-cart" onclick="addProduct(this,{id:'dental-004',name:'Sickle Scaler & Curette Set',category:'Dental Surgery',img:'img/img1.jpg'})"><i class="fas fa-plus"></i> Add to Enquiry</button>
+                            <a href="https://wa.me/923426004911?text=Hi%2C%20interested%20in%20Sickle%20Scaler%20Set" target="_blank" class="btn-inquire"><i class="fab fa-whatsapp"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-lg-4 wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="product-card">
+                        <div class="product-img-wrap">
+                            <img src="img/img2.jpg" alt="Mouth Mirror">
+                            <span class="product-badge bestseller">Bestseller</span>
+                            <button class="product-wishlist" onclick="this.classList.toggle('active');this.innerHTML=this.classList.contains('active')?'<i class=\'fas fa-heart\'></i>':'<i class=\'far fa-heart\'></i>'"><i class="far fa-heart"></i></button>
+                        </div>
+                        <div class="product-card-body">
+                            <div class="product-category-tag">Dental Surgery</div>
+                            <div class="product-name">Mouth Mirror &amp; Tweezers Set</div>
+                            <div class="product-desc">High-quality chrome-plated mouth mirrors and tweezers for standard dental examination procedures.</div>
+                            <div class="product-meta"><span class="product-material"><i class="fas fa-circle me-1" style="color:#aaa;font-size:.6rem"></i> Chrome SS</span><span class="product-moq">MOQ: 50 pcs</span></div>
+                        </div>
+                        <div class="product-card-footer">
+                            <button class="btn-add-cart" onclick="addProduct(this,{id:'dental-005',name:'Mouth Mirror & Tweezers Set',category:'Dental Surgery',img:'img/img2.jpg'})"><i class="fas fa-plus"></i> Add to Enquiry</button>
+                            <a href="https://wa.me/923426004911?text=Hi%2C%20interested%20in%20Mouth%20Mirror%20Set" target="_blank" class="btn-inquire"><i class="fab fa-whatsapp"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-6 col-lg-4 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="product-card">
+                        <div class="product-img-wrap">
+                            <img src="img/img4.jpg" alt="Needle Holder">
+                            <span class="product-badge new">New</span>
+                            <button class="product-wishlist" onclick="this.classList.toggle('active');this.innerHTML=this.classList.contains('active')?'<i class=\'fas fa-heart\'></i>':'<i class=\'far fa-heart\'></i>'"><i class="far fa-heart"></i></button>
+                        </div>
+                        <div class="product-card-body">
+                            <div class="product-category-tag">Dental Surgery</div>
+                            <div class="product-name">Dental Needle Holder (Mathieu)</div>
+                            <div class="product-desc">Mathieu pattern needle holder with spring-lock mechanism for oral suturing procedures. Available in 14cm/16cm.</div>
+                            <div class="product-meta"><span class="product-material"><i class="fas fa-circle me-1" style="color:#aaa;font-size:.6rem"></i> Surgical SS</span><span class="product-moq">MOQ: 15 pcs</span></div>
+                        </div>
+                        <div class="product-card-footer">
+                            <button class="btn-add-cart" onclick="addProduct(this,{id:'dental-006',name:'Dental Needle Holder (Mathieu)',category:'Dental Surgery',img:'img/img4.jpg'})"><i class="fas fa-plus"></i> Add to Enquiry</button>
+                            <a href="https://wa.me/923426004911?text=Hi%2C%20interested%20in%20Dental%20Needle%20Holder" target="_blank" class="btn-inquire"><i class="fab fa-whatsapp"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                END COMMENTED-OUT PRODUCTS -->
+
+            </div>
+
+            <div class="text-center mt-5">
+                <p class="text-muted mb-3">Don't see what you need? We manufacture custom instruments to specification.</p>
+                <a href="contact.html" class="btn btn-primary py-3 px-5 me-3">Request Custom Order</a>
+                <button onclick="AlhahCart.open()" class="btn btn-outline-primary py-3 px-5">
+                    <i class="fas fa-shopping-bag me-2"></i>View Enquiry Cart
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
     <div class="container-fluid bg-dark footer py-5 wow fadeIn" data-wow-delay="0.1s">
         <div class="container py-5">
             <div class="row g-5">
                 <div class="col-lg-3 col-md-6">
                     <h5 class="text-uppercase text-light mb-4">Our Office</h5>
                     <p class="mb-2"><i class="fa fa-map-marker-alt text-primary me-3"></i>Kotli Loharan West Head Marala Road Main Chowk, Sialkot</p>
-                    <p class="mb-2"><i class="fa fa-phone-alt text-primary me-3"></i>+92 342 60 4911</p>
+                    <p class="mb-2"><i class="fa fa-phone-alt text-primary me-3"></i>+92 342 600 4911</p>
                     <p class="mb-2"><i class="fa fa-envelope text-primary me-3"></i>alhahindustries@gmail.com</p>
-                    <div class="d-flex pt-3">
-                        <a class="btn btn-square btn-light me-2" href="https://www.facebook.com/share/1DZgaXQ6Km/" target="_blank">
-        <i class="fab fa-facebook-f"></i>
-    </a>
-
-    <a class="btn btn-square btn-light me-2" href="https://www.instagram.com/yourinstagram" target="_blank">
-        <i class="fab fa-instagram"></i>
-    </a>
+                    <div class="d-flex gap-2 pt-3">
+                        <a class="btn btn-square btn-light" href="https://www.facebook.com/share/1DZgaXQ6Km/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-square btn-light" href="https://www.instagram.com/alhah_industries?igsh=MTJmdG5tcnBnZzl0Zw==" target="_blank"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6">
                     <h5 class="text-uppercase text-light mb-4">Quick Links</h5>
                     <a class="btn btn-link" href="about.html">About Us</a>
                     <a class="btn btn-link" href="contact.html">Contact Us</a>
-                    <!-- <a class="btn btn-link" href="">Our Services</a> -->
-                    <a class="btn btn-link" href="Terms&Conditions.html">Terms & Condition</a>
-                    <!-- <a class="btn btn-link" href="">Support</a> -->
+                    <a class="btn btn-link" href="Terms&Conditions.html">Terms &amp; Conditions</a>
                 </div>
                 <div class="col-lg-3 col-md-6">
-                    <h5 class="text-uppercase text-light mb-4">Business Hours</h5>
-                    <p class="text-uppercase mb-0">Monday - Friday</p>
-                    <p>09:00 am - 07:00 pm</p>
-                    <p class="text-uppercase mb-0">Saturday</p>
-                    <p>09:00 am - 12:00 pm</p>
-                    <p class="text-uppercase mb-0">Sunday</p>
-                    <p>Closed</p>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <h5 class="text-uppercase text-light mb-4">Gallery</h5>
-                    <div class="row g-1">
-                        <div class="col-4">
-                            <img class="img-fluid" src="img/img1.jpg" alt="">
-                        </div>
-                        <div class="col-4">
-                            <img class="img-fluid" src="img/img2.jpg" alt="">
-                        </div>
-                        <div class="col-4">
-                            <img class="img-fluid" src="img/img4.jpg" alt="">
-                        </div>
-                        <div class="col-4">
-                            <img class="img-fluid" src="img/img5.jpg" alt="">
-                        </div>
-                        <div class="col-4">
-                            <img class="img-fluid" src="img/img6.jpg" alt="">
-                        </div>
-                        <div class="col-4">
-                            <img class="img-fluid" src="img/img7.jpg" alt="">
-                        </div>
-                    </div>
+                    <h5 class="text-uppercase text-light mb-4">Downloads</h5>
+                    <a class="btn btn-link d-flex align-items-center gap-2" href="pdf/Dental_Surgery__Alhah_Industries_001.pdf" download="Alhah_Dental_Surgery_Catalogue.pdf">
+                        <i class="fas fa-book-medical" style="color:var(--emerald,#00C49A)"></i> Instrument Catalogue
+                    </a>
+                    <a class="btn btn-link d-flex align-items-center gap-2" href="pdf/Alhah_Industries_Price_List_2025.pdf" download="Alhah_Industries_Price_List_2025.pdf">
+                        <i class="fas fa-file-invoice" style="color:var(--emerald,#00C49A)"></i> Price List 2025
+                    </a>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Footer End -->
-
-
-    <!-- Copyright Start -->
     <div class="container-fluid text-body copyright py-4">
         <div class="container">
-            <div class="row">
-                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                    &copy; <a class="fw-semi-bold" href="#">Your Site Name</a>, All Right Reserved.
-                </div>
-                <div class="col-md-6 text-center text-md-end">
-
-                    <!--/*** The author’s attribution link must remain intact in the template. ***/-->
-                    <!--/*** If you wish to remove this credit link, please purchase the Pro Version . ***/-->
-                    Designed By <a class="fw-semi-bold" href="https://htmlcodex.com">HTML Codex</a>
-                </div>
-            </div>
+            <div class="col-12 text-center">&copy; <a class="fw-semi-bold" href="#">ALHAH INDUSTRIES</a>, All Rights Reserved.</div>
         </div>
     </div>
-    <!-- Copyright End -->
 
+    <!-- Back to top — hidden by default; JS only shows it when scrolled down -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top" style="display:none;opacity:0;"><i class="bi bi-arrow-up"></i></a>
 
-    <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i
-            class="bi bi-arrow-up"></i></a>
-
-
-    <!-- JavaScript Libraries -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="lib/wow/wow.min.js"></script>
     <script src="lib/easing/easing.min.js"></script>
     <script src="lib/waypoints/waypoints.min.js"></script>
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-
-    <!-- Template Javascript -->
+    <script src="js/cart.js"></script>
     <script src="js/main.js"></script>
+    <script>
+        function addProduct(btn, product) {
+            AlhahCart.add(product);
+            const orig = btn.innerHTML;
+            btn.innerHTML = '<i class="fas fa-check"></i> Added!';
+            btn.classList.add('added');
+            setTimeout(() => { btn.innerHTML = orig; btn.classList.remove('added'); }, 1500);
+        }
+    </script>
+    <script src="js/search.js"></script>
 </body>
-
 </html>

@@ -2,6 +2,9 @@
 <html lang="en">
 
 <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;1,9..40,400&display=swap" rel="stylesheet">
     <meta charset="utf-8">
     <title>Contact</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
@@ -13,10 +16,7 @@
     <link href="img/favicon.ico" rel="icon">
 
     <!-- Google Web Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@700;800&display=swap"
-        rel="stylesheet">
+        
 
     <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
@@ -31,6 +31,7 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+    <link href="css/colors.css" rel="stylesheet">
 </head>
 
 <body>
@@ -52,13 +53,13 @@
                 <div class="ms-auto d-flex align-items-center">
                     <small class="ms-4"><i class="fa fa-map-marker-alt me-3"></i>Kotli Loharan Main Chowk Marala Road, Sialkot</small>
                     <small class="ms-4"><i class="fa fa-envelope me-3"></i>alhahindustries@gmail.com</small>
-                    <small class="ms-4"><i class="fa fa-phone-alt me-3"></i>+92 342 60 4911</small>
+                    <small class="ms-4"><i class="fa fa-phone-alt me-3"></i>+92 342 600 4911</small>
                     <div class="ms-3 d-flex">
                                                 <a class="btn btn-sm-square btn-light text-primary ms-2" href=""><i
                                 class="fab fa-facebook-f"></i></a>
                         <!-- <a class="btn btn-sm-square btn-light text-primary ms-2" href=""><i
                                 class="fab fa-twitter"></i></a> -->
-                        <a class="btn btn-sm-square btn-light text-primary ms-2" href="https://www.instagram.com/alhah_tower?igsh=MTJmdG5tcnBnZzl0Zw=="><i class="fab fa-instagram"></i></a>
+                        <a class="btn btn-sm-square btn-light text-primary ms-2" href="https://www.instagram.com/alhah_industries?igsh=MTJmdG5tcnBnZzl0Zw=="><i class="fab fa-instagram"></i></a>
 
                     </div>
                 </div>
@@ -87,12 +88,11 @@
                         <div class="nav-item dropdown">
                             <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Categories</a>
                             <div class="dropdown-menu bg-light rounded-0 rounded-bottom m-0">
-        <a href="GeneralSurgery.html"    class="dropdown-item" data-pdf="pdf/Catalogue.pdf">General Surgery</a>
-        <a href="DentalSurgery.html"     class="dropdown-item" data-pdf="pdf/Catalogue.pdf">Dental Surgery</a>
-        <a href="Orthipaedic.html"      class="dropdown-item" data-pdf="pdf/Catalogue.pdf">Orthopedic Surgery</a>
-        <a href="Spinal.html"           class="dropdown-item" data-pdf="pdf/Catalogue.pdf">Spinal Surgery</a>
-        <a href="Neuro.html"            class="dropdown-item" data-pdf="pdf/Catalogue.pdf">Neuro Surgery</a>
-
+        <!-- <a href="GeneralSurgery.html"    class="dropdown-item" data-pdf="pdf/Lab Task2.pdf">General Surgery</a> -->
+        <a href="DentalSurgery.html"     class="dropdown-item" data-pdf="pdf/Lab Task2.pdf">Dental Surgery</a>
+        <!-- <a href="Orthipaedic.html"      class="dropdown-item" data-pdf="pdf/Lab Task2.pdf">Orthopedic Surgery</a> -->
+        <a href="Spinal.html"      class="dropdown-item" data-pdf="pdf/Lab Task2.pdf">Plastic Surgery</a>
+        <a href="Neuro.html"      class="dropdown-item" data-pdf="pdf/Lab Task2.pdf">Ophthalmic Surgery</a>
                             </div>
                         </div>
                         <a href="contact.html" class="nav-item nav-link active">Contact</a>
@@ -116,8 +116,8 @@
                         <h1 class="display-6 text-uppercase mb-3 animated slideInDown">Contact</h1>
                         <nav aria-label="breadcrumb animated slideInDown">
                             <ol class="breadcrumb justify-content-center mb-0">
-                                <li class="breadcrumb-item"><a href="#">Home</a></li>
-                                <li class="breadcrumb-item"><a href="#">Pages</a></li>
+                                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                                <!-- <li class="breadcrumb-item"><a href="#">Pages</a></li> -->
                                 <li class="breadcrumb-item" aria-current="page">Contact</li>
                             </ol>
                         </nav>
@@ -128,7 +128,24 @@
     </div>
     <!-- Page Header End -->
 
+<!-- FLOATING WHATSAPP BUTTON (left side) -->
+<div class="whatsapp-float-left" id="whatsappFloatLeft">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Chat">
+</div>
 
+<!-- POPUP CARD (hidden initially) -->
+<div class="whatsapp-simple-popup" id="whatsappSimplePopup">
+    <button class="close-simple-popup" id="closeSimplePopup">&times;</button>
+    <div class="popup-simple-body">
+        <p>Hi there! 👋<br>Click below to Whatsapp us.</p>
+        <a href="https://wa.me/923426004911?text=Hello%21%20I%20need%20more%20information%20about%20your%20surgical%20instruments." 
+           target="_blank" 
+           class="whatsapp-number-simple">
+            +92 342 600 4911
+        </a>
+        <div class="reply-note">We reply within 24 hours.</div>
+    </div>
+</div>
     <!-- Contact Start -->
     <div class="pt-6 pb-6">
         <div class="container-fluid contact py-5 wow fadeIn" data-wow-delay="0.1s">
@@ -152,8 +169,8 @@
                                 <i class="bi bi-telephone text-dark fs-3"></i>
                             </div>
                             <div class="ms-3">
-                                <h6 class="text-white text-uppercase">Call Us</h6>
-                                <span class="text-white">+92 342 60 4911</span>
+                                <h6 class="text-white text-uppercase">Whatsapp Us</h6>
+                                <span class="text-white">+92 342 600 4911</span>
                             </div>
                         </div>
                     </div>
@@ -217,17 +234,16 @@
                 <div class="col-lg-3 col-md-6">
                     <h5 class="text-uppercase text-light mb-4">Our Office</h5>
                     <p class="mb-2"><i class="fa fa-map-marker-alt text-primary me-3"></i>Kotli Loharan West Head Marala Road Main Chowk, Sialkot</p>
-                    <p class="mb-2"><i class="fa fa-phone-alt text-primary me-3"></i>+92 342 60 4911</p>
+                    <p class="mb-2"><i class="fa fa-phone-alt text-primary me-3"></i>+92 342 600 4911</p>
                     <p class="mb-2"><i class="fa fa-envelope text-primary me-3"></i>alhahindustries@gmail.com</p>
                     <div class="d-flex pt-3">
-                        <a class="btn btn-square btn-light me-2" href=""><i
-                                class="fab fa-twitter"></i></a>
-                        <a class="btn btn-square btn-light me-2" href=""><i
-                                class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-square btn-light me-2" href=""><i
-                                class="fab fa-youtube"></i></a>
-                        <a class="btn btn-square btn-light me-2" href=""><i
-                                class="fab fa-linkedin-in"></i></a>
+                       <a class="btn btn-square btn-light me-2" href="https://www.facebook.com/share/1DZgaXQ6Km/" target="_blank">
+        <i class="fab fa-facebook-f"></i>
+    </a>
+
+    <a class="btn btn-square btn-light me-2" href="https://www.instagram.com/alhah_industries?igsh=MTJmdG5tcnBnZzl0Zw==" target="_blank">
+        <i class="fab fa-instagram"></i>
+    </a>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6">
@@ -238,7 +254,7 @@
                     <a class="btn btn-link" href="Terms&Conditions.html">Terms & Condition</a>
                     <!-- <a class="btn btn-link" href="">Support</a> -->
                 </div>
-                <div class="col-lg-3 col-md-6">
+                <!-- <div class="col-lg-3 col-md-6">
                     <h5 class="text-uppercase text-light mb-4">Business Hours</h5>
                     <p class="text-uppercase mb-0">Monday - Friday</p>
                     <p>09:00 am - 07:00 pm</p>
@@ -267,7 +283,7 @@
                         </div>
                         <div class="col-4">
                             <img class="img-fluid" src="img/img7.jpg" alt="">
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
@@ -281,13 +297,13 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                    &copy; <a class="fw-semi-bold" href="#">Your Site Name</a>, All Right Reserved.
+                    &copy; <a class="fw-semi-bold" href="#">alhahindustries</a>, All Right Reserved.
                 </div>
                 <div class="col-md-6 text-center text-md-end">
                     
                     <!--/*** The author’s attribution link must remain intact in the template. ***/-->
                     <!--/*** If you wish to remove this credit link, please purchase the Pro Version . ***/-->
-                    Designed By <a class="fw-semi-bold" href="https://htmlcodex.com">HTML Codex</a>
+                    <!-- Designed By <a class="fw-semi-bold" href="https://htmlcodex.com">HTML Codex</a> -->
                 </div>
             </div>
         </div>
@@ -296,7 +312,7 @@
 
 
     <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top" style="display:none;opacity:0;"><i
             class="bi bi-arrow-up"></i></a>
 
 
@@ -310,6 +326,7 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    <script src="js/search.js"></script>
 </body>
 
 </html>

@@ -49,12 +49,15 @@ document.querySelectorAll('.dropdown-item[data-pdf]').forEach(item => {
     });
     
     
-    // Back to top button
+    // Back to top button — only visible when the user has scrolled down past 300px
+    // The button starts with display:none in the HTML so it is never shown on page load.
     $(window).scroll(function () {
         if ($(this).scrollTop() > 300) {
-            $('.back-to-top').fadeIn('slow');
+            $('.back-to-top').css('display','flex').stop(true).animate({opacity:1}, 400);
         } else {
-            $('.back-to-top').fadeOut('slow');
+            $('.back-to-top').stop(true).animate({opacity:0}, 400, function(){
+                $(this).css('display','none');
+            });
         }
     });
     $('.back-to-top').click(function () {
@@ -104,4 +107,74 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 });
+// Initialize WOW.js (if needed, keep as is)
+new WOW().init();
 
+// Detect if device supports hover (desktop/laptop with mouse)
+const supportsHover = window.matchMedia('(hover: hover)').matches;
+
+// Get all flip cards and the hint element (optional)
+const flipCards = document.querySelectorAll('.flip-card');
+const hintSpan = document.getElementById('interactionHint');
+
+// Update hint text based on interaction type
+// if (hintSpan) {
+//     hintSpan.innerHTML = supportsHover
+//         ? '✨ Hover over any card to flip and reveal the category details! ✨'
+//         : '👆 Tap any card to flip and see the category — then click the button! 👆';
+// }
+
+// Set up flip behavior
+if (supportsHover) {
+    // Desktop: flip on mouse enter / leave
+    flipCards.forEach(card => {
+        card.addEventListener('mouseenter', () => {
+            card.classList.add('flipped');
+        });
+        card.addEventListener('mouseleave', () => {
+            card.classList.remove('flipped');
+        });
+    });
+} else {
+    // Mobile / touch: toggle flip on click, but ignore button clicks
+    flipCards.forEach(card => {
+        card.addEventListener('click', (event) => {
+            // Do not flip if the click was on the button
+            if (event.target.closest('.btn-category')) return;
+            card.classList.toggle('flipped');
+        });
+    });
+}
+
+const floatBtn = document.getElementById('whatsappFloatLeft');
+const popup = document.getElementById('whatsappSimplePopup');
+const closeBtn = document.getElementById('closeSimplePopup');
+
+// Open popup on button tap/click (only one event to avoid double toggle)
+floatBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    popup.classList.toggle('active');
+});
+// No separate touchstart – click handles both desktop and mobile
+
+// Close popup when cross button is clicked or touched
+closeBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    popup.classList.remove('active');
+});
+closeBtn.addEventListener('touchstart', (e) => {
+    e.stopPropagation();
+    popup.classList.remove('active');
+});
+
+// Close popup when tapping/clicking outside
+document.addEventListener('click', (e) => {
+    if (!floatBtn.contains(e.target) && !popup.contains(e.target)) {
+        popup.classList.remove('active');
+    }
+});
+document.addEventListener('touchstart', (e) => {
+    if (!floatBtn.contains(e.target) && !popup.contains(e.target)) {
+        popup.classList.remove('active');
+    }
+});
