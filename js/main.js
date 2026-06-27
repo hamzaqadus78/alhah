@@ -1,26 +1,4 @@
 
-// Smart PDF Download: Each category PDF downloads only ONCE per browser session
-document.querySelectorAll('.dropdown-item[data-pdf]').forEach(item => {
-    item.addEventListener('click', function(e) {
-        const pdfUrl = this.getAttribute('data-pdf');
-        const storageKey = 'downloaded_' + btoa(pdfUrl); // Unique key for each PDF
-
-        // Check if this specific PDF was already downloaded in this session
-        if (!sessionStorage.getItem(storageKey)) {
-            // Trigger download
-            const link = document.createElement('a');
-            link.href = pdfUrl;
-            link.download = pdfUrl.split('/').pop(); // Uses actual filename
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link);
-
-            // Mark this specific PDF as downloaded for this session
-            sessionStorage.setItem(storageKey, 'true');
-        }
-        // If already downloaded this session → just open page, no re-download
-    });
-});
 (function ($) {
     "use strict";
 
